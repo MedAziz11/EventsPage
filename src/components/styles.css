@@ -4,7 +4,11 @@
   padding: 0;
   font-family: "Quicksand", sans-serif;
 }
-
+body{
+  background: url(../img/bg.png);
+  background-size: cover;
+  background-position: center;
+}
 a {
   text-decoration: none;
 }
@@ -13,30 +17,49 @@ a {
   padding: 45px;
 }
 .container {
-  padding-top: 49px;
-  padding-bottom: 47px;
+  padding-top: 10%;
   position: center;
   height: 100%;
-  background: url(../img/bg.png);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0px
+}
+
+@media screen and (max-width: 60px) {
+  .container {
+    padding-top: 49em;
+  }
 }
 
 .container h2 {
   text-align: center;
-  font-size: 10em;
+  
   line-height: 0.785em;
   color: yellow;
+  display: block;
+}
+@media screen and (min-width: 601px) {
+  .container {
+    padding-top: 3%;
+  }
+  .container h2 {
+    font-size: 10em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container h2 {
+    font-size: 41.5vw;
+  }
+
 }
 
 .container h3 {
   display: block;
-  font-weight: 800;
+  font-weight: 8vw;
+
   letter-spacing: 7px;
   font-size: 2.5em;
   text-align: center;
@@ -50,15 +73,22 @@ a {
 }
 .countdown div {
   position: relative;
-  width: 100px;
-  height: 100px;
+
+  width: 10vw;
+  min-width: 60px;
+
+  max-height: 100px;
+  height: 20vw;
+  min-height: 70px;
+ 
   line-height: 100px;
   text-align: center;
   background: #333;
   color: #fff;
-  margin: 0 15px;
+  margin: 0 1vw;
   font-size: 3em;
   font-weight: 500;
+  padding-top: 0px;
 }
 .countdown div:before {
   content: "";
@@ -66,12 +96,15 @@ a {
   bottom: -30px;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 9vw;
+  max-height: 50px;
   background: #ff0;
   color: #333;
   font-size: 0.4em;
   line-height: 35px;
   font-weight: 300;
+  margin: 0;
+
 }
 .countdown div#day:before {
   content: "Days";
@@ -88,7 +121,7 @@ a {
 .button {
   position: relative;
   text-align: center;
-  margin: 0px 100px 0px 100px;
+  margin: 20px 100px 0px 100px;
   width: 200px;
   padding: 10px;
   font-size: 25px;
@@ -103,6 +136,7 @@ a {
   border-radius: 50px;
   transition: 1s;
 }
+
 .button:hover {
   box-shadow: 0 5px 50px 0 #ffff00 inset, 0 5px 50px 0 #ffff00,
     0 5px 50px 0 #ffff00 inset, 0 5px 50px 0 #ffff00;
@@ -118,11 +152,34 @@ a {
   padding-top: 5px;
 }
 
+
+@media screen and (max-width: 600px) {
+
+  .countdown div:before{
+    font-size: 0.3em;
+  }
+
+  .button {
+    margin: 0px 100px 0px 100px;
+    width: 150px;
+    font-weight: 200;
+    font-size: 18px;
+  }
+  .container h3{
+    font-size: 2em;
+  }
+  .place{
+    font-size: 1em;
+  }
+}
+
 input {
   border: 4px solid yellow;
   border-radius: 50px;
   line-height: 0.7em;
-  height: 30px;
+  max-height: 30px;
+  height: 8vh;
+  min-height: 20px;
   width: 250px;
   padding:0px 4px 0px 7px;
   font-weight: 600;
