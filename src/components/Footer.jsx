@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       <div className="place">
-        <i className="fa fa-calendar-check-o"></i> 19 December 2020 &nbsp;
+        <i className="fa fa-calendar-check-o"></i> 16 January 2021 &nbsp;
         <i className="fa fa-map-marker"></i>&nbsp;Ariana, Tunis.
       </div>
       <div className="logo">

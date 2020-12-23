@@ -13,7 +13,7 @@ const Counter = () => {
   const [animation, setAnimation] = useState(false);
   let interval = useRef(null);
   const startTimer = () => {
-    let countDate = new Date("Dec 19, 2020 00:00:00").getTime();
+    let countDate = new Date("Jan 16, 2021 00:00:00").getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       let gap = countDate - now;

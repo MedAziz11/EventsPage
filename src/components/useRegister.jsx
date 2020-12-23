@@ -6,15 +6,13 @@ const useRegister = () => {
     email: "",
   });
 
-  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setValues({[name]: value });
-    console.log(values)
+    setValues({...values ,[name]: value });
   };
 
-  return {handleChange, values, errors}
+  return {handleChange, values}
 };
 
 export default useRegister;

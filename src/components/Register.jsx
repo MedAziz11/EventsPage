@@ -2,13 +2,22 @@ import React from "react";
 import Input from "./Input";
 import useRegister from "./useRegister";
 
-const Register = () => {
-  const { handleChange, values, errors } = useRegister();
+import api from "../api";
 
-  const handleSubmit = (e) => {
+const Register = () => {
+  const { handleChange, values } = useRegister();
+
+  const registerUser = async (payload) =>{
+    return await api.post("/users/", payload)
+  }
+
+  function handleSubmit(e) {
     e.preventDefault();
+    const response = registerUser(values);
+    console.log(response);
     document.getElementById("button").click();
-  };
+  }
+
   return (
     <form
       className="animate__animated animate__fadeInUp"
